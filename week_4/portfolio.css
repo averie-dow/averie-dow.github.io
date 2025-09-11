@@ -126,10 +126,13 @@ body{
         }
         .footer{
             display:flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: center;
             margin-left: 8%;
             margin-right:8%;
+        }
+        .contact-info{
+            margin-left:-20%;
         }
 
 

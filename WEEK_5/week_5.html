@@ -17,15 +17,23 @@
             text-align: center;
             font-size: 3rem;
         }
-        button{
+        .expand-btn{
             height:10rem;
             width:10rem;
             border-radius: 50%;
             border: 2px black solid;
             
         }
+        .minimize-btn{
+            display:none;
+            height:10rem;
+            width:10rem;
+            border-radius: 50%;
+            border: 2px black solid;
+        }
         button:hover{
             background-color: orange;
+            
         }
 
         .card-content{
@@ -35,6 +43,7 @@
             flex-direction: column;
             gap:0rem;
         }
+
     
         
     </style>
@@ -45,6 +54,7 @@
         <div class="card-header">
             <h3>Community Garden Project</h3>
             <button class="expand-btn" aria-label="Expand card">+</button>
+            <button class="minimize-btn" aria-label="minimize card">-</button>
   </div>
     <div class="card-content">
      <p class="summary">Join neighbors in creating a shared growing space...</p>
@@ -72,6 +82,7 @@
         else{
             details.style.display = "none";
             info=false;
+            
         }
 
     }

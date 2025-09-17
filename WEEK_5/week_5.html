@@ -68,9 +68,11 @@
     let info = false;
 
     const expandBtn = document.querySelector('.expand-btn');
+    const minBtn = document.querySelector('.minimize-btn');
     const details = document.querySelector('.card-content');
 
     expandBtn.addEventListener('click', showInfo);
+    minBtn.addEventListener('click', closeInfo);
 
     function showInfo(){
         //console.log("hi!");
@@ -83,9 +85,22 @@
             details.style.display = "none";
             info=false;
             
-        }
+        }}
 
+    function closeInfo(){
+        
+        if(info==true){
+            details.style.display="flex";
+            info=false;
+
+        }
+        else{
+            details.style.display = 'none';
+            info=true;
+        }
     }
+
+    
     
 
 </script>

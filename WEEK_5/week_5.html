@@ -53,8 +53,7 @@
     <div class="card">
         <div class="card-header">
             <h3>Community Garden Project</h3>
-            <button class="expand-btn" aria-label="Expand card">+</button>
-            <button class="minimize-btn" aria-label="minimize card">-</button>
+            <button class="expand-btn" aria-label="Expand/Minimize button">+</button>
   </div>
     <div class="card-content">
      <p class="summary">Join neighbors in creating a shared growing space...</p>
@@ -68,7 +67,6 @@
     let info = false;
 
     const expandBtn = document.querySelector('.expand-btn');
-    const minBtn = document.querySelector('.minimize-btn');
     const details = document.querySelector('.card-content');
 
     expandBtn.addEventListener('click', showInfo);
@@ -79,26 +77,16 @@
         //alert("this is a alert");
         if(info== false){
             details.style.display = "flex";
+            expandBtn.textContent="-";
             info=true;
         }
         else{
             details.style.display = "none";
+            expandBtn.textContent="+";
             info=false;
             
         }}
 
-    function closeInfo(){
-        
-        if(info==true){
-            details.style.display="flex";
-            info=false;
-
-        }
-        else{
-            details.style.display = 'none';
-            info=true;
-        }
-    }
 
     
     

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Community Garden</title>
     <style>
         .card-header{
             display:flex;
@@ -73,11 +73,11 @@
     minBtn.addEventListener('click', closeInfo);
 
     function showInfo(){
-        //console.log("hi!");
-        //alert("this is a alert");
+
         if(info== false){
             details.style.display = "flex";
             expandBtn.textContent="-";
+            // SOURCE for textContent: https://www.w3schools.com/jsref/prop_node_textcontent.asp
             info=true;
         }
         else{

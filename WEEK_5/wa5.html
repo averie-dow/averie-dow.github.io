@@ -12,9 +12,9 @@
     <nav class="main-nav">
       <div class="nav-brand">Sandbox Hub</div>
         <button class="nav-toggle" aria-label="Toggle navigation menu">
-    <span class="hamburger-menu"></span>
-    <span class="hamburger-menu"></span>
-    <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
     </button>
       <ul class="nav-menu">
       <li><a href="#home" aria-label="Home page">Home</a></li>
@@ -61,30 +61,10 @@ Interactive/Community tools: Show calendar and rehearsal calendars, season votin
 Audition information email signup so people can get emails when Sandbox is holding auditions or looking for crew assistance. </p
 </p>
     <script>
-      const navToggle = document.querySelector('.nav-toggle');
-
-      const navMenu = document.querySelector('.nav-menu');  
-
-      let info = false;
+        // https://www.w3schools.com/jsref/met_document_queryselector.asp
 
 
-    expandBtn.addEventListener('click', showInfo);
-    minBtn.addEventListener('click', closeInfo);
-
-    function showInfo(){
-
-        if(info== false){
-            details.style.display = "flex";
-            expandBtn.textContent="-";
-            // SOURCE for textContent: https://www.w3schools.com/jsref/prop_node_textcontent.asp
-            info=true;
-        }
-        else{
-            details.style.display = "none";
-            expandBtn.textContent="+";
-            info=false;
-            
-        }}
+ 
     </script>
 </body>
 </html>

@@ -16,7 +16,7 @@
             <span class="hamburger-menu"></span>
             <span class="hamburger-menu"></span>
     </button>
-      <ul class="nav-menu">
+      <ul class="nav-menu hide">
       <li><a href="#home" aria-label="Home page">Home</a></li>
       <li><a href="#resources" aria-label="Resources page">Actor Resources</a></li>
       <li><a href="#events" aria-label="See a Show page">See a Show</a></li>
@@ -62,6 +62,20 @@ Audition information email signup so people can get emails when Sandbox is holdi
 </p>
     <script>
         // https://www.w3schools.com/jsref/met_document_queryselector.asp
+
+       let info = false;
+
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener(‘click’, showMenu)
+
+    function showMenu(){
+        
+       
+        navMenu.classList.toggle("show");
+        navMenu.classList.toggle("hide");
+
 
 
  

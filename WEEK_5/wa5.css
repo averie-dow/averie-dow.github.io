@@ -25,6 +25,9 @@
     font-weight:600;
     font-style: bold;
 }
+.nav-menu.show {
+  display: flex;
+}
  .nav-menu li{
     display: flex;
     gap: 0.2em;
@@ -82,6 +85,7 @@ p {
 
         /* i still have no idea what media queries do please help */
 @media (max-width: 768px) {
+
     .nav-menu{
         display:none;
         flex-direction: column;
@@ -121,8 +125,11 @@ p {
         padding-top: 6px;
         align-items: center;
     }  
+
 .hamburger-menu:hover{
         background-color: white;
     }
+
+}
 
 

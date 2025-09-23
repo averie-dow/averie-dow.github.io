@@ -16,7 +16,7 @@
             <span class="hamburger-menu"></span>
             <span class="hamburger-menu"></span>
     </button>
-      <ul class="nav-menu hide">
+      <ul class="nav-menu">
       <li><a href="#home" aria-label="Home page">Home</a></li>
       <li><a href="#resources" aria-label="Resources page">Actor Resources</a></li>
       <li><a href="#events" aria-label="See a Show page">See a Show</a></li>
@@ -58,24 +58,18 @@ Success Metric: I would know if my site was successful if actors were able to se
 <p>Actor page: Including downloadable PDFs for scripts, embedded rehearsal videos, and changing daily calls. 
 Audience Page: Description for the ticketing process for audience members so that actors do not need to describe the process to their loved ones. 
 Interactive/Community tools: Show calendar and rehearsal calendars, season voting process so people can vote for next semester's shows without missing it on Instagram. 
-Audition information email signup so people can get emails when Sandbox is holding auditions or looking for crew assistance. </p
-</p>
+Audition information email signup so people can get emails when Sandbox is holding auditions or looking for crew assistance. </p>
+
     <script>
         // https://www.w3schools.com/jsref/met_document_queryselector.asp
 
        let info = false;
 
-        const navToggle = document.querySelector('.nav-toggle');
+        const navToggle = document.querySelector(".nav-toggle")
         const navMenu = document.querySelector('.nav-menu');
-
-        navToggle.addEventListener(‘click’, showMenu)
-
-    function showMenu(){
-        
-       
-        navMenu.classList.toggle("show");
-        navMenu.classList.toggle("hide");
-
+        navToggle.addEventListener("click", () => {
+            navMenu.classList.toggle("show");
+        });
 
 
  

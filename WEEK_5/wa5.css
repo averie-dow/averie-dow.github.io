@@ -17,10 +17,10 @@
     display: flex;
     gap: 0.6em;
 
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
     flex-grow: 1;
-    
+    justify-content: flex-end;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight:600;
     font-style: bold;
@@ -28,6 +28,7 @@
 
 .nav-menu.show {
   display: flex;
+
 }
  .nav-menu li{
     display: flex;
@@ -35,7 +36,6 @@
     justify-content: space-between;
     width: 100%;
     flex-grow: 1;  
-    list-style: center;
     font-family: "tt-ricordi-allegria";
     font-weight: 400;
     font-style: normal;
@@ -100,7 +100,7 @@ p {
 
         width: 100%;
         flex-grow: 1;  
-        list-style: center;
+        
         font-family: "tt-ricordi-allegria";
         font-weight: 400;
         font-style: normal;

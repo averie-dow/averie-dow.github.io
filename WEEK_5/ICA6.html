@@ -10,20 +10,62 @@
     <div class="gallery-container">
   <header class="gallery-header">Photo Gallery</header>
   <nav class="gallery-nav">
-    <button>All</button>
-    <button>Nature</button>
-    <button>Architecture</button>
+    <aside class="gallery-sidebar">Filter Options</aside>
+    <button class="filter-button">All</button>
+    <button class="filter-button">Nature</button>
+    <button class="filter-button">Architecture</button>
   </nav>
   <main class="gallery-grid">
-    <div class="photo-card">Photo 1</div>
-    <div class="photo-card">Photo 2</div>
-    <div class="photo-card">Photo 3</div>
-    <div class="photo-card featured">Featured Photo</div>
-    <div class="photo-card">Photo 5</div>
-    <div class="photo-card">Photo 6</div>
+    <div class="photo-card" data-category="architecture">
+      <img src="assets_ica/building1.jpg">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/flower.jpg">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/ladybug.jpg">
+    </div>
+    <div class="photo-card featured" data-category="celeb" >
+      <img src="assets_ica/beyonce.png">
+    </div>
+    <div class="photo-card" data-category="architecture">
+      <img src="assets_ica/building2.jpeg">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/waterfall.jpg">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/ladybug.jpg">
+    </div>
+    <div class="photo-card" data-category="architecture">
+      <img src="assets_ica/building1.jpg">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/flower.jpg">
+    </div>
   </main>
-  <aside class="gallery-sidebar">Filter Options</aside>
+  
 </div>
+<script>
+  const filterButtons = document.querySelectorAll('.gallery-nav button');
+  const photoCards = document.querySelectorAll('.photo-card');
+
+  filterButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    const filterValue = event.target.textContent.toLowerCase()
+    filterPhotos(filterValue)
+  })
+})
+function filterPhotos(category) {
+  photoCards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
     
 </body>
 </html>

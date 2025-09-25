@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa5_2.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gje6xda.css">
+    <title>CU Sandbox</title>
+
+</head>
+<body>
+    <nav class="main-nav">
+      <div class="nav-brand">Sandbox Hub</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
+    </button>
+      <ul class="nav-menu">
+      <li><a href="#home" aria-label="Home page">Home</a></li>
+      <li><a href="#resources" aria-label="Resources page">Actor Resources</a></li>
+      <li><a href="#events" aria-label="See a Show page">See a Show</a></li>
+      <li><a href="#contact" aria-label="Contact Page">Contact Sandbox</a></li>
+      </ul>
+    </nav>
+
+    <main> <!--This is where we put the main content in the page-->
+        
+        <section class="current-grid">
+            <Section class="current-show current">
+                <section class="content">
+                <h2>Current Show</h2>
+                <p>caption</p>
+                </section>
+
+            </Section>
+
+            <Section class="current-cast current">
+                <section class="content">
+                <h2>Current Cast</h2>
+                <p>caption</p>
+                </section>
+                </section>
+
+            </Section>
+        </section>
+
+
+
+
+    </main>
+    <script>
+        // https://www.w3schools.com/jsref/met_document_queryselector.asp
+
+//        let info = false;
+
+//         const navToggle = document.querySelector(".nav-toggle");
+//         const navMenu = document.querySelector('.nav-menu');
+//         navToggle.addEventListener("click", () => {
+//             navMenu.classList.toggle("show");
+
+// }) ;
+    //document queries the whole doc, query selector looks for specific thing    
+    const currentShow = document.querySelector(".current-show");
+    //a key press will only work on a particular area of your screen if there is some way to toggle focus, if u want the whole page just dont add anything to specify
+    let color_changed = false;
+
+    function changeBGCol(event) {
+        console.log("triggered");
+
+        if (event.key == "c") {
+
+            if (color_changed == false) {
+                currentShow.style.backgroundColor = "pink";
+                color_changed = true;
+            }
+            else {
+                currentShow.style.backgroundColor = "#ffffff";
+                color_changed = false;
+            }
+            
+        }
+    }
+
+    addEventListener("keydown", (event) => {changeBGCol(event)})
+ 
+    </script>
+</body>
+</html>

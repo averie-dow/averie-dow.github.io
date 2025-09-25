@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ICA6.css">
+    <title>In Class Assignment 6</title>
+</head>
+<body>
+    <div class="gallery-container">
+  <header class="gallery-header">Photo Gallery</header>
+  <nav class="gallery-nav">
+    
+    <button class="filter-button">All</button>
+    <button class="filter-button">Nature</button>
+    <button class="filter-button">Architecture</button>
+  </nav>
+  <main class="gallery-grid">
+    <div class="photo-card" data-category="architecture">
+      <img src="assets_ica/building1.jpg" alt="Image of a building">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/flower.jpg" alt="Image of a flower">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/ladybug.jpg" alt="Image of a ladybug">
+    </div>
+    <div class="photo-card featured" data-category="celeb" >
+      <img src="assets_ica/beyonce.png" alt="image of beyonce">
+    </div>
+    <div class="photo-card" data-category="architecture">
+      <img src="assets_ica/building2.jpeg" alt="Image of a building">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/waterfall.jpg" alt="Image of a waterfall">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/ladybug.jpg" alt="Image of a ladybug">
+    </div>
+    <div class="photo-card" data-category="architecture">
+      <img src="assets_ica/building1.jpg" alt="Image of a building">
+    </div>
+    <div class="photo-card" data-category="nature">
+      <img src="assets_ica/flower.jpg" alt="Image of a flower">
+    </div>
+  </main>
+  <aside class="gallery-sidebar">Filter Options</aside>
+  
+</div>
+<script>
+  const filterButtons = document.querySelectorAll('.gallery-nav button');
+  const photoCards = document.querySelectorAll('.photo-card');
+
+  filterButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    const filterValue = event.target.textContent.toLowerCase()
+    filterPhotos(filterValue)
+  })
+})
+function filterPhotos(category) {
+  photoCards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+    
+</body>
+</html>

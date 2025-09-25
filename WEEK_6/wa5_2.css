@@ -1,0 +1,175 @@
+.main-nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+    padding:24px;
+}
+
+.nav-brand {
+    color:white;
+    font-family: "tt-ricordi-allegria";
+    font-style: normal;
+    font-size: 60px;
+
+}
+.nav-menu{
+    display: flex;
+    gap: 0.6em;
+
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:600;
+    font-style: bold;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+ .nav-menu li{
+    display: flex;
+    gap: 0.2em;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;  
+    list-style: center;
+    font-family: "tt-ricordi-allegria";
+    font-weight: 400;
+    font-style: normal;
+    font-size:medium;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 6px;
+  width:130px;
+  height:50px;
+  font-family: "grover-slab", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a:visited{
+    text-align:center;
+    color: green;
+}
+
+a:hover{
+    color: grey;
+}
+
+p {
+    font-size:small;
+    color:black;
+    
+}
+
+
+
+.nav-toggle{
+    display:none;
+    flex-direction:column;
+    border-radius:20px;
+    background-color: green;
+    transition-duration:0.2s;
+    height:60px;
+    padding:10px;
+}
+
+.current-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin:16px;
+    grid-template-areas:
+        "current-show current-cast";
+
+}
+.current{
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 16px;
+    margin:16px;
+
+}
+.content{
+    margin: 16px;
+}
+.current h2{
+    text-align: center;
+
+}
+.current-show{
+    grid-area: current-show;
+    background-color: pink;
+}
+.current-cast{
+    grid-area: current-cast;
+
+}
+  /*text-aling, justify content/self/ and align-content can work too*/
+    
+
+
+
+
+
+
+
+        /* i still have no idea what media queries do please help */
+@media (max-width: 768px) {
+
+    .nav-menu{
+        display:none;
+        flex-direction: column;
+        background-color: white;
+        padding: 0px;
+        justify-content: space-between;
+
+    }
+    .nav-menu li{
+        display: flex;
+
+        width: 100%;
+        flex-grow: 1;  
+        list-style: center;
+        font-family: "tt-ricordi-allegria";
+        font-weight: 400;
+        font-style: normal;
+        font-size:medium;
+}
+    .nav-toggle{
+        display:flex;
+        position:absolute;
+        top:24px;
+        right:24px;
+        
+    }
+
+    .nav-toggle:hover{
+        background-color: green;
+    }
+
+    .hamburger-menu{
+        background-color: black;
+        border-radius:4px;
+        width: 40px;
+        margin:2px; 
+        padding-top: 6px;
+        align-items: center;
+    }  
+
+.hamburger-menu:hover{
+        background-color: white;
+    }
+
+}
+
+

@@ -26,6 +26,12 @@
     font-style: bold;
 }
 
+h4, h3, h2, h5{
+font-family: "grover-slab", serif;
+font-weight: 400;
+font-style: normal;
+}
+
 .nav-menu.show {
   display: flex;
 }
@@ -83,37 +89,96 @@ p {
     padding:10px;
 }
 
-.current-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    margin:16px;
-    grid-template-areas:
-        "current-show current-cast";
 
-}
-.current{
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 16px;
-    margin:16px;
-
-}
 .content{
     margin: 16px;
 }
 .current h2{
     text-align: center;
+    
 
+}
+.current-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 16px;
+    grid-template-areas: "current-show current-cast";
 }
 .current-show{
     grid-area: current-show;
     background-color: pink;
+    margin: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+
 }
 .current-cast{
     grid-area: current-cast;
+    background-color: pink;
+    margin: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-items: center;
 
 }
+.featured-show-picture{
+    width:fit-content;
+    height: 400px;
+    display: flex;
+    justify-self: center;
+
+}
+
+.past-shows-photos-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr;
+    margin:16px;
+    grid-template-areas:
+        "past-show-card past-show-card past-show-card";
+
+}
+.past-show-card{
+    margin:16px;
+    display: grid;
+
+
+}
+img {
+    height: 250px;
+
+}
+img:hover{
+    transition-duration: .2s;
+    filter: opacity(50%);
+}
+.confirmation-message{
+    display:none;
+    background-color: lightgreen;
+    padding:2px;
+}
+.suggestion-box-input{
+    width:500px;
+    height:200px;
+}
+.suggestion-box-grid{
+    display:grid;
+    grid-template-rows:.1fr .1fr .1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    margin-left: 30px;
+ 
+}
+.suggestion-box-suggestion{
+    align-content: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
   /*text-aling, justify content/self/ and align-content can work too*/
     
 
@@ -123,7 +188,7 @@ p {
 
 
 
-        /* i still have no idea what media queries do please help */
+  
 @media (max-width: 768px) {
 
     .nav-menu{

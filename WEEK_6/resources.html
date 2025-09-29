@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wa5_2.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gje6xda.css">
+    <title>CU Sandbox</title>
+
+</head>
+<body>
+    <nav class="main-nav">
+      <div class="nav-brand">Sandbox Hub</div>
+        <button class="nav-toggle" aria-label="Toggle navigation menu">
+            <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
+            <span class="hamburger-menu"></span>
+    </button>
+      <ul class="nav-menu">
+      <li><a href="wa5_2.html" aria-label="Home page">Home</a></li>
+      <li><a href="resources.html" aria-label="Resources page">Actor Resources</a></li>
+      <li><a href="#events" aria-label="See a Show page">See a Show</a></li>
+      <li><a href="#contact" aria-label="Contact Page">Contact Sandbox</a></li>
+      </ul>
+    </nav>
+
+    <header class="gallery-header">Past Seasons</header>
+  <nav class="gallery-nav">
+    
+    <button class="filter-button">All</button>
+    <button class="filter-button">2025</button>
+    <button class="filter-button">2024</button>
+  </nav>
+    <main> <!--This is where we put the main content in the page-->
+        <section class="past-shows-photos-grid">
+            <div class="past-show-card" data-category="2024">
+            <img src="assets_week6/wolves.jpg" alt="A hand-drawn image adveritisng the play The Wolves">
+            <h4>The Wolves, Spring 2024</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2024">
+            <img src="assets_week6/wolves_savvy.jpg" alt="Image of Averie Dow as #7 and Savvy Gullett as #00 in The Wolves">
+            <h4>The Wolves, Spring 2024</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2024">
+            <img src="assets_week6/ayli.JPG" alt="Image of Averie Dow and Tilly Musser in As You Like It">
+            <h4>As You Like It, Spring 2024</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2025">
+            <img src="assets_week6/cymbeline.png" alt="Wulfgar Parmenter and Edie Roth in Cymbeline">
+            <h4>Cymbeline, Spring 2025</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2024">
+            <img src="assets_week6/flick.jpg" alt="Advertisement for The Flick">
+            <h4>The Flick, Fall 2024</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2025">
+            <img src="assets_week6/fres.jpg" alt="Advertisement for Fres">
+            <h4>Fresh, Spring 2025</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2025">
+            <img src="assets_week6/lipstick.jpg" alt="Advertisement for Lipstick Traces">
+            <h4>Lipstick Traces, Spring 2025</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2025">
+            <img src="assets_week6/lipstick_cyrus.jpg" alt="Advertisement for Lipstick Traces featuring Cyrus Porter">
+            <h4>Lipstick Traces, Spring 2025</h4>
+            </div>
+
+            <div class="past-show-card" data-category="2025">
+            <img src="assets_week6/shekills.jpg" alt="Advertisement for She Kills Monsters">
+            <h4>She Kills Monsters, Fall 2025</h4>
+            </div>
+
+
+
+
+
+            
+   
+
+
+
+
+    </main>
+  
+<script>
+  const filterButtons = document.querySelectorAll('.gallery-nav button');
+  const photoCards = document.querySelectorAll('.past-show-card');
+
+  filterButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    const filterValue = event.target.textContent.toLowerCase()
+    filterPhotos(filterValue)
+  })
+})
+function filterPhotos(category) {
+  photoCards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+
+ 
+    </script>
+</body>
+</html>

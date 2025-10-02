@@ -35,6 +35,7 @@ font-weight: 400;
 font-style: normal;
   font-weight: bold;
   font-size: 2.4rem;
+  color:white;
 }
 
 .nav-links {
@@ -66,10 +67,41 @@ font-style: normal;
   color: #ffffff;
   cursor: pointer;
 }
+.page-header {
+  
+  margin: 2rem auto;
+  position: relative;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #ed4965;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+/* Back button in top-left */
+.back-button {
+  position:relative;
+ 
+}
 
 .content {
   padding: 2rem;
 }
+.content-title{
+  padding-top: 2rem;
+  padding-left: 4rem;
+}
+.content-date{
+  padding-left: 4rem;
+}
+
 
 h1 {
   color: #ed4965;
@@ -116,9 +148,9 @@ button:hover {
 
 /* Hero Section */
 .hero {
-  background: url("index_assets/_DSC0373.JPG") no-repeat left center/cover; /* Replace with your image */
-  background-size: 140%;
-  background-position: 0em -16rem;
+  background: url("index_assets/ginger_.png") repeat; /* Replace with your image */
+  background-size: 10%;
+  background-position: ;
   background-color: #ed4965;
   color: #ffffff;
   text-align: center;
@@ -173,6 +205,215 @@ button:hover {
   background: #333333;
   
 }
+/* Updates Section */
+/* Updates Section - Larger Cards */
+.updates {
+  padding:  3rem 2rem 6rem 2rem; /* more breathing room */
+
+  text-align: center;
+}
+.proxima-nova{
+  width:fit-content;
+}
+.updates-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem; /* more spacing between cards */
+  max-width: 1400px; /* wider grid */
+  margin: 0 auto;
+}
+
+.update-card {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.update-card img {
+/* bigger image */
+}
+.proxima-nova{
+  height: 30rem;
+}
+.apparmor{
+  height: 30rem;
+}
+.pride{
+  height: 30rem;
+}
+.update-card h3 {
+  color: #ed4965;
+  font-size: 1.5rem; /* bigger title */
+  margin: 1.2rem 0 0.8rem 0;
+}
+
+.update-card p {
+  padding: 0 1.5rem 2rem;
+  font-size: 1.1rem; /* larger paragraph */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Hover effect */
+.update-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .updates-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .updates-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .update-card img {
+    height: 250px; /* shrink slightly for small screens */
+  }
+}
+
+/* Portfolio Navigation */
+.portfolio-content {
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+.portfolio-title {
+
+  font-size: 2.5rem;
+  color: #ed4965;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 3rem;
+}
+.portfolio-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* three cards per row */
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.portfolio-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-card {
+  position: relative;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(237, 73, 101, 0.8); /* pink overlay with opacity */
+  z-index: 1;
+}
+
+.portfolio-content {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio-card h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.portfolio-card p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Hover effect */
+.portfolio-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  background: rgba(237, 73, 101, 0.6); /* slightly darker on hover */
+}
+
+/* Assign background images */
+.portfolio-link.ux-work .portfolio-card {
+  background-image: url("index_assets/Screenshot\ 2025-09-12\ at\ 2.11.47\ PM.png");
+  background-position: 0rem -2rem;
+}
+
+.portfolio-link.graphic-design .portfolio-card {
+  background-image: url("index_assets/hamburgefonstiv.jpg");
+  background-position: -40rem -20rem;
+  background-size: 400%;
+}
+
+.portfolio-link.data-science .portfolio-card {
+  background-image: url("index_assets/taylor_graph.png");
+  background-position: -3rem 0rem;
+  background-size: 180%;
+}
+
+.portfolio-link.theater .portfolio-card {
+  background-image: url("index_assets/graphic_photography.jpg");
+}
+
+.portfolio-link.web-mobile-dev .portfolio-card {
+  background-image: url("index_assets/web_mobile_dev.jpg");
+}
+
+.portfolio-link.writing .portfolio-card {
+  background-image: url("index_assets/writing.jpg");
+}
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .portfolio-nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-nav {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 1000px) {
+  .portfolio-nav {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+}
+
+@media (max-width: 700px) {
+  .portfolio-nav {
+    grid-template-columns: 1fr; /* 1 card per row on mobile */
+  }
+}
+
 
 /* Responsive Hero */
 

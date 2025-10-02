@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wa5_2.css">
+    <link rel="stylesheet" href="ica7.css">
     <link rel="stylesheet" href="https://use.typekit.net/gje6xda.css">
     <title>CU Sandbox</title>
 
@@ -129,10 +129,10 @@
     addEventListener("keydown", (event) => {confirmation(event)})
     addEventListener("keydown", (event) => {changeBGCol(event)})
 
-// Save language choice
+
 //give .theme html elements a name , btn
        let btn = document.querySelector('.theme');
-
+// https://www.w3schools.com/jsref/met_element_addeventlistener.asp
 //give the btn an event listener and it will listen for the theme function 
        btn.addEventListener('click', getNewTheme);
 
@@ -147,13 +147,13 @@
 // pageTheme == same as current theme but different bc already used currentTheme
 // https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_classname_toggle
         function setTheme(pageTheme) {
+            // make a new variable newTheme
             let newTheme;
                 if (pageTheme == 'dark')
                  {
                     newTheme = 'light'
                 }
-                else 
-                {
+                else {
                     newTheme = 'dark';
                 }
             localStorage.setItem('userTheme', newTheme);
@@ -167,71 +167,7 @@
             document.body.className = savedTheme;
         });
 
-                
-//  localStorage.setItem('userTheme', newTheme);
-//             document.body.className = newTheme;
-
-//         function theme(){
-//             setTheme('light');
-
-//         }
-// // // Save user's theme choice
-//     function setTheme(theme) {
-//         let inTheme = theme;
-//         if (inTheme == 'dark'){
-//             theme = 'light';
-//         }
-        
-//         else {
-//             theme = 'dark';
-//         }
-
-//         localStorage.setItem('userTheme', theme);
-//             document.body.className = theme;
-//         }
-
-// // Load saved theme on page load
-//     window.addEventListener('load', function() {
-//             const savedTheme = localStorage.getItem('userTheme') || 'light';
-//         document.body.className = savedTheme;
-//     });
-
-//     const btn = document.querySelector(".theme");
-//     //a key press will only work on a particular area of your screen if there is some way to toggle focus, if u want the whole page just dont add anything to specify
-//     //theme == false = darkmode
-//     btn.addEventListener('click', changeTheme)
-//     let darkModeOn = false;
-
-//     function setTheme(theme) {
-//     localStorage.setItem('userTheme', theme);
-//     document.body.className = theme;
-// }
-//     function changeTheme(event) {
-//         console.log("triggered");
-
-//             if (darkModeOn == false) {
-//                 document.body.style.backgroundColor = "black";
-//                 darkModeOn = true;
-                   
-//             }
-//             else {
-//                 document.body.style.backgroundColor = "#ffffff";
-//                 darkModeOn = false;
-                
-// //         }
-//             }}
-    
-//     window.addEventListener('load', function() {
-//     const savedTheme = localStorage.getItem('userTheme');
-//     document.body.className = savedTheme;
-// });
-
-        //     window.addEventListener('load', function() {
-        //     const savedTheme = localStorage.getItem('userTheme') || 'light';
-        //     document.body.className = savedTheme;
-            
-        // }
-    
+  
  
     </script>
 </body>

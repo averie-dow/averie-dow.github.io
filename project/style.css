@@ -318,6 +318,7 @@ button:hover {
   overflow: hidden;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding: 1.5rem;
   color: white;
   background-size: cover;
@@ -328,7 +329,7 @@ button:hover {
 .portfolio-overlay {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(237, 73, 101, 0.8); /* pink overlay with opacity */
+  background: rgba(237, 73, 101, 0.9); /* pink overlay with opacity */
   z-index: 1;
 }
 
@@ -351,6 +352,7 @@ button:hover {
 .portfolio-card:hover {
   transform: translateY(-5px) scale(1.02);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition-duration: .5s;
 }
 
 .portfolio-card:hover .portfolio-overlay {
@@ -376,15 +378,89 @@ button:hover {
 }
 
 .portfolio-link.theater .portfolio-card {
-  background-image: url("index_assets/graphic_photography.jpg");
+  background-image: url("index_assets/dow_ayli.JPG");
 }
 
 .portfolio-link.web-mobile-dev .portfolio-card {
-  background-image: url("index_assets/web_mobile_dev.jpg");
+  background-image: url("index_assets/grace_hopper.png");
 }
 
 .portfolio-link.writing .portfolio-card {
-  background-image: url("index_assets/writing.jpg");
+  background-image: url("index_assets/dow_thrift_img.png");
+}
+
+.resume-header{
+  margin-top:2rem;
+}
+.resume-pdf{
+  display: grid;
+  justify-self: center;
+
+}
+.resume-content{
+  display:grid;
+  justify-items: center;
+
+}
+.ux-projects {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.project {
+  width: 100%;
+  border-radius: 32px;
+  min-height: 80vh;  /* section height */
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 2rem;
+  background-color: #f9f9f9; /* neutral bg */
+  margin-bottom: 2rem;
+}
+
+.project-text {
+  max-width: 1000px;
+  margin: 0 0 2rem 0;  /* remove auto-centering */
+  text-align: left;    /* align text left */
+}
+
+.current-project{
+  font-size:3rem;
+  color:white;
+  background-color: black;
+}
+.current-project p{
+  color:white;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  color: #ed4965;
+  margin-bottom: 1rem;
+  margin: 0 0 2rem 0;  /* remove auto-centering */
+  text-align: left;    /* align text left */
+}
+
+
+.project-description {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project-images {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.project-images img {
+  width: 30%;               /* 3 images side by side */
+  min-width: 250px;         /* prevent them from shrinking too much */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
 
 /* Responsive adjustments */
@@ -413,7 +489,76 @@ button:hover {
     grid-template-columns: 1fr; /* 1 card per row on mobile */
   }
 }
+.site-footer {
+  display: flex;
+  justify-content: center;   /* puts them side by side instead of spread apart */
+  align-items: flex-start;
+  gap: 4rem;                     /* controls space between left and right blocks */
+  padding: 2rem;
+  background-color: #000;
+  color: #fff;
+  flex-wrap: wrap;
+}
 
+
+.footer-left {
+  max-width: 45%;
+
+}
+
+.footer-logo {
+  height: 60px;/* placeholder background */
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-family: crayonette-djr, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.4rem;
+  color:white;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #ed4965;
+  font-weight: bold;
+  margin-top: .2rem;
+}
+
+.footer-right h3 {
+  margin-bottom: 0.5rem;
+  color: #ed4965;
+}
+
+.footer-right p {
+  margin: 0.3rem 0;
+}
+
+.footer-right a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-right a:hover {
+  color: #ed4965;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-left, .footer-right {
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+}
 
 /* Responsive Hero */
 

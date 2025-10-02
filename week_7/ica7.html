@@ -156,6 +156,7 @@
                 else {
                     newTheme = 'dark';
                 }
+                // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
             localStorage.setItem('userTheme', newTheme);
             document.body.className = newTheme;
         }

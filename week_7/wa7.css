@@ -98,6 +98,7 @@ p {
 }
 
 
+
 .content{
     margin: 16px;
 }
@@ -106,13 +107,13 @@ p {
     
 
 }
-.current-grid{
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    margin: 16px;
+.current-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
     grid-template-areas: "current-show current-cast";
+    margin: 16px;
 }
+
 .current-show{
     grid-area: current-show;
     background-color: pink;
@@ -125,9 +126,9 @@ p {
     grid-area: current-cast;
     background-color: pink;
     margin: 16px;
+    display:grid;
     border: 2px solid black;
     border-radius: 4px;
-    display: flex;
     justify-items: center;
 
 }
@@ -187,13 +188,6 @@ img:hover{
     margin-top: 50px;
 }
 
-  /*text-aling, justify content/self/ and align-content can work too*/
-    
-
-
-
-
-
 
 
 .main-footer{
@@ -221,8 +215,8 @@ img:hover{
     height:50px;
     margin:10px;
     flex: 1 1 0;
-    s
-    padding:16px;
+    padding-left:16px;
+padding-right:16px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #large-text{
@@ -238,26 +232,27 @@ img:hover{
        /* .75 rem */ 
 }
 
+
+        /* i still have no idea what media queries do please help */
 @media (max-width: 768px) {
 
     .nav-menu{
         display:none;
         flex-direction: column;
         background-color: white;
+        width: 40px;
         padding: 0px;
-        justify-content: space-between;
-
+        margin:20px
     }
+
     .nav-menu li{
         display: flex;
-
-        width: 100%;
+        width: 40px;
         flex-grow: 1;  
-        list-style: center;
         font-family: "tt-ricordi-allegria";
         font-weight: 400;
         font-style: normal;
-        font-size:2rem;
+
 }
     .nav-toggle{
         display:flex;
@@ -274,23 +269,106 @@ img:hover{
     .hamburger-menu{
         background-color: black;
         border-radius:4px;
-        width: 40px;
+        width: 3rem;
         margin:2px; 
         padding-top: 6px;
         align-items: center;
     }  
 
-.hamburger-menu:hover{
+    .hamburger-menu:hover{
         background-color: white;
+        width: 2rem;
+   
     }
+
+
+
+    .text-sizes {
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+    .current-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "current-show"
+            "current-cast";
+        
+        }
+
+    .main-footer button{
+    height:50px;
+    margin:10px;
+    flex: 1 1 0;
+    padding-left:16px;
+padding-right:16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    #large-text{
+    font-size: 24px;
+    /* 1.5rem */
+}
+    #medium-text{
+    font-size: 16px;
+   /* 1 rem */ 
+}
+#small-text{
+    font-size: 12px;
+       /* .75 rem */ 
+}
+.main-footer{
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content: flex-start;
+}
+.main-footer h5{
+    flex: 1 1 0;
+    justify-content: flex-start;
+}
+.text-sizes {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.main-footer button{
+    height:50px;
+    margin:10px;
+    flex: 1 1 0;
+
+    padding-left:16px;
+padding-right:16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 }
 
 @media(max-width: 900px){
-    
+    .current-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "current-show"
+            "current-cast";
+        
+        }
+    .featured-show-picture{
+    width: 20rem;
+    height: auto;
+    display: flex;
+    justify-self: center;
 
-
-
+}
 
 }
 

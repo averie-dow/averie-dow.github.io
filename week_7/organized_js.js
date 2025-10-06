@@ -1,6 +1,33 @@
  const currentShow = document.querySelector(".current-show");
-    //a key press will only work on a particular area of your screen if there is some way to toggle focus, if u want the whole page just dont add anything to specify
-    let color_changed = false;
+    const confirmationMSG = document.querySelector(".confirmation-message");
+    const formInput = document.querySelector(".suggestion-box");
+    const formData = document.querySelector(".suggestion-box-input");
+ const savedTheme = localStorage.getItem('userTheme');
+        const main = document.querySelector('main');
+
+        //these are the footer buttons for text size changes
+        const small_text = document.querySelector("#small-text");
+        const medium_text = document.querySelector("#medium-text");
+        const large_text = document.querySelector("#large-text");
+        const clear_text = document.querySelector("#clear-preferences");
+        const navToggle = document.querySelector(".nav-toggle");
+        const navMenu = document.querySelector('.nav-menu');
+
+
+       let info = false;
+        let color_changed = false;      
+let form_input = false;
+
+let btn = document.querySelector('.theme');
+let age = document.querySelector('.age');
+
+
+navToggle.addEventListener("click", () => {
+  console.log("Toggle clicked");
+  navMenu.classList.toggle("show");
+});
+
+
 
     function changeBGCol(event) {
         console.log("triggered");
@@ -18,10 +45,7 @@
             
         }
     }
-    const confirmationMSG = document.querySelector(".confirmation-message")
-    const formInput = document.querySelector(".suggestion-box");
-    const formData = document.querySelector(".suggestion-box-input")
-    let form_input = false;
+
     function confirmation(event){
         if (event.key == "Enter") {
             if (form_input == false) {
@@ -42,11 +66,6 @@
     addEventListener("keydown", (event) => {confirmation(event)})
     addEventListener("keydown", (event) => {changeBGCol(event)})
 
-
-//give .theme html elements a name , btn
-       let btn = document.querySelector('.theme');
-// https://www.w3schools.com/jsref/met_element_addeventlistener.asp
-//give the btn an event listener and it will listen for the theme function 
        btn.addEventListener('click', getNewTheme);
 
        //new funciton
@@ -56,10 +75,8 @@
                 const currentTheme = document.body.className ;
                 setTheme(currentTheme);
         }
-//new function to usse the current page theme to flip to the opposite
-// pageTheme == same as current theme but different bc already used currentTheme
-// https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_element_classname_toggle
-        function setTheme(pageTheme) {
+
+                function setTheme(pageTheme) {
             // make a new variable newTheme
             let newTheme;
                 if (pageTheme == 'dark')
@@ -73,31 +90,17 @@
             localStorage.setItem('userTheme', newTheme);
             document.body.className = newTheme;
         }
-
-//  localStorage.setItem('userTheme', newTheme);
-//             document.body.className = newTheme;
-        window.addEventListener('load', function() {
+                window.addEventListener('load', function() {
             const savedTheme = localStorage.getItem('userTheme');
             document.body.className = savedTheme;
         });
 
-
-
-        const main = document.querySelector('main');
-
-        //these are the footer buttons for text size changes
-        const small_text = document.querySelector("#small-text");
-        const medium_text = document.querySelector("#medium-text");
-        const large_text = document.querySelector("#large-text");
-        const clear_text = document.querySelector("#clear-preferences");
-
-function set_text_size(){
+        function set_text_size(){
     if(localStorage.getItem("fontSize") !== null){
         let temp_size = localStorage.getItem("fontSize");
         document.querySelector("html").style.fontSize = String(temp_size) + "px";
     }
 }
-
 function change_text_size(size){
     //temp_size is to hold the value in pixels as a variable
     let temp_size = size * 16;
@@ -105,14 +108,21 @@ function change_text_size(size){
     document.querySelector('html').style.fontSize = String(temp_size) + "px";
     localStorage.setItem("fontSize", temp_size);
 }
-
-        //* clear_local_storage
 function clear_local_storage(size){
     let temp_size = size * 16;
     localStorage.clear();
     document.querySelector("html").style.fontSize = String(temp_size) + "px";
 
 }
+
+function setAge (){
+    localStorage.setItem("age", age);
+    document.querySelector("demo").innerHTML =
+        localStorage.getItem("age");
+
+}
+
+
         window.addEventListener('load', set_text_size);
 
         small_text.addEventListener('click', () => {change_text_size(0.8)});
@@ -120,10 +130,7 @@ function clear_local_storage(size){
         large_text.addEventListener('click', () => {change_text_size(1.5)});
         clear_text.addEventListener('click', () => {change_text_size(1)});
 
-let info = false;
+        form.addEventListener('submit', function(event) {
+        event.preventDefault(); })
 
-        const navToggle = document.querySelector(".nav-toggle")
-        const navMenu = document.querySelector('.nav-menu');
-        navToggle.addEventListener("click", () => {
-            navMenu.classList.toggle("show");
-}) ;
+

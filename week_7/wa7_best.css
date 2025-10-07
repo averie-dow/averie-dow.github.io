@@ -1,0 +1,380 @@
+.light{
+    background-color: white;
+}
+.dark{
+    background-color: black;
+    color:white;
+}
+
+.spanish{
+    display:none;
+}
+.main-nav{
+    display:flex;
+    justify-content: space-between;
+    background-color: black;
+    color:white;
+    padding:3rem;
+}
+
+.nav-brand {
+    color:white;
+    font-family: "tt-ricordi-allegria";
+    font-style: normal;
+    font-size: 3rem;
+
+}
+.nav-menu{
+    display: flex;
+    gap: 0.6em;
+
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:600;
+    font-style: bold;
+}
+
+h4, h3, h2, h5{
+font-family: "grover-slab", serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.nav-menu.show {
+  display: flex;
+}
+ .nav-menu li{
+    display: flex;
+    gap: 0.2em;
+    justify-content: space-between;
+    width: 100%;
+    flex-grow: 1;  
+    list-style: center;
+    font-family: "tt-ricordi-allegria";
+    font-weight: 400;
+    font-style: normal;
+    font-size:1rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  text-align: center;
+  padding: 6px;
+  width:130px;
+  height:50px;
+  font-family: "grover-slab", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a:visited{
+    text-align:center;
+    color: green;
+}
+
+a:hover{
+    color: grey;
+}
+
+p {
+    font-size:1rem;
+    color:black;
+    
+}
+
+
+
+.nav-toggle{
+    display:none;
+    flex-direction:column;
+    border-radius:20px;
+    background-color: green;
+    transition-duration:0.2s;
+    height:60px;
+    padding:10px;
+}
+
+
+
+.content{
+    margin: 16px;
+}
+.current h2{
+    text-align: center;
+    
+
+}
+.current-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas: "current-show current-cast";
+    margin: 16px;
+}
+
+.current-show{
+    grid-area: current-show;
+    background-color: pink;
+    margin: 16px;
+    border: 2px solid black;
+    border-radius: 4px;
+
+}
+.current-cast{
+    grid-area: current-cast;
+    background-color: pink;
+    margin: 16px;
+    display:grid;
+    border: 2px solid black;
+    border-radius: 4px;
+    justify-items: center;
+
+}
+.featured-show-picture{
+    width:fit-content;
+    height: 400px;
+    display: flex;
+    justify-self: center;
+
+}
+
+.past-shows-photos-grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3fr;
+    margin:16px;
+    grid-template-areas:
+        "past-show-card past-show-card past-show-card";
+
+}
+.past-show-card{
+    margin:16px;
+    display: grid;
+
+
+}
+img {
+    height: 250px;
+
+}
+img:hover{
+    transition-duration: .2s;
+    filter: opacity(50%);
+}
+.confirmation-message{
+    display:none;
+    background-color: lightgreen;
+    padding:2px;
+}
+.suggestion-box-input{
+    width:500px;
+    height:200px;
+}
+.suggestion-box-grid{
+    display:grid;
+    grid-template-rows:.1fr .1fr .1fr;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-content: center;
+    margin-left: 30px;
+ 
+}
+.suggestion-box-suggestion{
+    align-content: center;
+    justify-content: center;
+    margin-left: 10px;
+    margin-top: 50px;
+}
+
+
+
+.main-footer{
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content: center;
+    
+
+
+}
+.main-footer h5{
+    flex: 1 1 0;
+}
+.text-sizes {
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+.main-footer button{
+    height:50px;
+    margin:10px;
+    flex: 1 1 0;
+    padding-left:16px;
+padding-right:16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#large-text{
+    font-size: 24px;
+    /* 1.5rem */
+}
+#medium-text{
+    font-size: 16px;
+   /* 1 rem */ 
+}
+#small-text{
+    font-size: 12px;
+       /* .75 rem */ 
+}
+
+
+        /* i still have no idea what media queries do please help */
+@media (max-width: 768px) {
+
+    .nav-menu{
+        display:none;
+        flex-direction: column;
+        background-color: white;
+        width: 40px;
+        padding: 0px;
+        margin:20px
+    }
+
+    .nav-menu li{
+        display: flex;
+        width: 40px;
+        flex-grow: 1;  
+        font-family: "tt-ricordi-allegria";
+        font-weight: 400;
+        font-style: normal;
+
+}
+    .nav-toggle{
+        display:flex;
+        position:absolute;
+        top:24px;
+        right:24px;
+        
+    }
+
+    .nav-toggle:hover{
+        background-color: green;
+    }
+
+    .hamburger-menu{
+        background-color: black;
+        border-radius:4px;
+        width: 3rem;
+        margin:2px; 
+        padding-top: 6px;
+        align-items: center;
+    }  
+
+    .hamburger-menu:hover{
+        background-color: white;
+        width: 2rem;
+   
+    }
+
+
+
+    .text-sizes {
+    width:50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+    .current-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "current-show"
+            "current-cast";
+        
+        }
+
+    .main-footer button{
+    height:50px;
+    margin:10px;
+    flex: 1 1 0;
+    padding-left:16px;
+padding-right:16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+    #large-text{
+    font-size: 24px;
+    /* 1.5rem */
+}
+    #medium-text{
+    font-size: 16px;
+   /* 1 rem */ 
+}
+#small-text{
+    font-size: 12px;
+       /* .75 rem */ 
+}
+.main-footer{
+    background-color: black;
+    color: white;
+    display:flex;
+    justify-content: flex-start;
+}
+.main-footer h5{
+    flex: 1 1 0;
+    justify-content: flex-start;
+}
+.text-sizes {
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+.main-footer button{
+    height:50px;
+    margin:10px;
+    flex: 1 1 0;
+
+    padding-left:16px;
+padding-right:16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+}
+
+@media(max-width: 900px){
+    .current-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "current-show"
+            "current-cast";
+        
+        }
+    .featured-show-picture{
+    width: 20rem;
+    height: auto;
+    display: flex;
+    justify-self: center;
+
+}
+
+}
+
+

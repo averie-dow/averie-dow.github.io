@@ -263,6 +263,8 @@ button:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
+
+
 /* Responsive */
 @media (max-width: 1000px) {
   .updates-grid {
@@ -281,9 +283,12 @@ button:hover {
 }
 
 /* Portfolio Navigation */
+
+
 .portfolio-content {
   padding: 2rem 2rem;
   text-align: center;
+
 }
 
 .portfolio-title {
@@ -303,7 +308,7 @@ button:hover {
   grid-template-columns: repeat(3, 1fr); /* three cards per row */
   gap: 2rem;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .portfolio-link {
@@ -408,6 +413,11 @@ button:hover {
 }
 
 
+.nav-buttons{
+  display:flex;
+  justify-content: space-between;
+}
+
 .project {
   width: 100%;
   border-radius: 32px;
@@ -453,16 +463,85 @@ button:hover {
   justify-content: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
+  
+}
+.project-item img:hover{
+  transform: translateY(-5px) scale(1.5);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition-duration: .8s;
 }
 
-.project-images img {
-  width: 30%;               /* 3 images side by side */
-  min-width: 250px;         /* prevent them from shrinking too much */
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 250px;
+  max-width: 30%;
+}
+
+.project-item img {
+  /* Set a fixed height and width for consistent sizing */
+  width: 400px;
+  height: 250px; /* Use a fixed height that works for your design */
+
+  /* The key property to make images the same size */
+  object-fit: cover;
+  
+  /* Center the image within its container to control the cropped area */
+  object-position: center;
+
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  object-fit: cover;
 }
 
+.project-item .caption {
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* New CSS for the specific item names/captions */
+.gallery-item figcaption {
+    padding: 1em;
+    font-size: 1em;
+    text-align: center;
+    justify-self: center;
+    color: #555;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-5px);
+}
 /* Responsive adjustments */
 @media (max-width: 1000px) {
   .portfolio-nav {

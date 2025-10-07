@@ -26,9 +26,26 @@ let form_input = false;
 let spanishMode= false;
 
 let btn = document.querySelector('.theme');
+//check local storage if localstorage.getitem("spanish") == true;
+//if spanish is false, run the part that isn't spanish, and don't need to set item 
+function checkLocalStorageLanguage(){
+    // variable for state of spanish mode can be true or false
+    const isSpanish = localStorage.getItem("spanish");
+// if spanish is true show the spanish language
+// shoutout josie for helping me with this 
+    if (isSpanish == 'true'){
+        spanishText.forEach (item =>{
+            item.style.display = "grid";
+        });
+    }
+}
+
+
 
 //give my button something to listen for and onclick run changelanguage
 languageToggle.addEventListener('click', changeLanguage);
+
+
 // function defintion
 function changeLanguage(){
     console.log("worked");
@@ -40,6 +57,7 @@ function changeLanguage(){
             item.style.display = "grid";
         });
         spanishMode = true;
+        localStorage.setItem("spanish",true);
     }
 
 // if spanish mode is active and button is clicked, make it hidden
@@ -48,6 +66,7 @@ function changeLanguage(){
             item.style.display = "none";
         });
         spanishMode = false;
+        localStorage.setItem("spanish",false);
     }
     
 }
@@ -141,14 +160,11 @@ function clear_local_storage(size){
 
 }
 
-function setAge (){
-    localStorage.setItem("age", age);
-    document.querySelector("demo").innerHTML =
-        localStorage.getItem("age");
-
-}
 
 
+window.addEventListener('DOMContentLoaded', () =>{
+    checkLocalStorageLanguage()
+});
         window.addEventListener('load', set_text_size);
 
         small_text.addEventListener('click', () => {change_text_size(0.8)});

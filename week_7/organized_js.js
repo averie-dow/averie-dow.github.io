@@ -4,7 +4,7 @@
     const formData = document.querySelector(".suggestion-box-input");
  const savedTheme = localStorage.getItem('userTheme');
         const main = document.querySelector('main');
-
+const savedLanguage = localStorage.getItem('userLanguage');
         //these are the footer buttons for text size changes
         const small_text = document.querySelector("#small-text");
         const medium_text = document.querySelector("#medium-text");
@@ -12,21 +12,45 @@
         const clear_text = document.querySelector("#clear-preferences");
         const navToggle = document.querySelector(".nav-toggle");
         const navMenu = document.querySelector('.nav-menu');
+    // buttons for language changes
+        const languageToggle = document.querySelector('.language');
+        const spanishText = document.querySelectorAll('.spanish');
+     
 
 
-       let info = false;
-        let color_changed = false;      
+
+let info = false;
+let color_changed = false;      
 let form_input = false;
 
+let spanishMode= false;
+
 let btn = document.querySelector('.theme');
-let age = document.querySelector('.age');
 
+//give my button something to listen for and onclick run changelanguage
+languageToggle.addEventListener('click', changeLanguage);
+// function defintion
+function changeLanguage(){
+    console.log("worked");
 
-navToggle.addEventListener("click", () => {
-  console.log("Toggle clicked");
-  navMenu.classList.toggle("show");
-});
+// https://www.w3schools.com/jsref/met_document_queryselectorAll.asp
+// if spanish mode isn't active and button is clicked, make it visible
+    if  (spanishMode == false){
+        spanishText.forEach (item =>{
+            item.style.display = "grid";
+        });
+        spanishMode = true;
+    }
 
+// if spanish mode is active and button is clicked, make it hidden
+    else{
+     spanishText.forEach (item =>{
+            item.style.display = "none";
+        });
+        spanishMode = false;
+    }
+    
+}
 
 
     function changeBGCol(event) {
@@ -71,10 +95,12 @@ navToggle.addEventListener("click", () => {
        //new funciton
        //find out what the theme is RIGHT NOW using .classname 
     //    put CURRENT THEME into nexdt funciton SETTHEME
+
         function getNewTheme(){
                 const currentTheme = document.body.className ;
                 setTheme(currentTheme);
         }
+        
 
                 function setTheme(pageTheme) {
             // make a new variable newTheme
@@ -130,7 +156,6 @@ function setAge (){
         large_text.addEventListener('click', () => {change_text_size(1.5)});
         clear_text.addEventListener('click', () => {change_text_size(1)});
 
-        form.addEventListener('submit', function(event) {
-        event.preventDefault(); })
+
 
 

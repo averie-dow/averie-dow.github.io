@@ -6,6 +6,9 @@
     color:white;
 }
 
+.spanish{
+    display:none;
+}
 .main-nav{
     display:flex;
     justify-content: space-between;
@@ -211,6 +214,7 @@ img:hover{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
+
 .main-footer button{
     height:50px;
     margin:10px;

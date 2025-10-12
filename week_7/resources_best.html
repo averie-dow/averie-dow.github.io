@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="wa5_2.css">
+    <link rel="stylesheet" href="wa7_best.css">
     <link rel="stylesheet" href="https://use.typekit.net/gje6xda.css">
     <title>CU Sandbox</title>
 
@@ -18,20 +18,22 @@
     </button>
       <ul class="nav-menu">
       <li><a href="wa7_best.html" aria-label="Home page">Home</a></li>
-      <li><a href="resources.html" aria-label="Resources page">Actor Resources</a></li>
+      <li><a href="resources_best.html" aria-label="Resources page">Actor Resources</a></li>
       <li><a href="see_a_show_best.html" aria-label="See a Show page">See a Show</a></li>
       <li><a href="contact_best.html" aria-label="Contact Page">Contact Sandbox</a></li>
       </ul>
     </nav>
 
-    <h1 class="gallery-header">Past Seasons</h1>
+    
+    <header class="gallery-header">Past Seasons</header>
   <nav class="gallery-nav">
     
     <button class="filter-button">All</button>
     <button class="filter-button">2025</button>
     <button class="filter-button">2024</button>
   </nav>
-    <main> <!--This is where we put the main content in the page-->
+    <main> 
+      <!--This is where we put the main content in the page-->
         <section class="past-shows-photos-grid">
             <div class="past-show-card" data-category="2024">
             <img src="assets_week6/wolves.jpg" alt="A hand-drawn image adveritisng the play The Wolves">
@@ -90,10 +92,26 @@
 
     </main>
   
+<script>
+  const filterButtons = document.querySelectorAll('.gallery-nav button');
+  const photoCards = document.querySelectorAll('.past-show-card');
 
-
-
-<script src="wa7_best.js" ></script>
+  filterButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    const filterValue = event.target.textContent.toLowerCase()
+    filterPhotos(filterValue)
+  })
+})
+function filterPhotos(category) {
+  photoCards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
 
  
     </script>

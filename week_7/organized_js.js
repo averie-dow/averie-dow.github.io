@@ -15,6 +15,9 @@ const savedLanguage = localStorage.getItem('userLanguage');
     // buttons for language changes
         const languageToggle = document.querySelector('.language');
         const spanishText = document.querySelectorAll('.spanish');
+        //gallery filter buttons 
+        const filterButtons = document.querySelectorAll('.gallery-nav button');
+        const photoCards = document.querySelectorAll('.past-show-card');
      
 
 

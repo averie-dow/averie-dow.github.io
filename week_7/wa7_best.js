@@ -21,9 +21,6 @@
         const languageToggle = document.querySelector('.language');
         const spanishText = document.querySelectorAll('.spanish');
         
-        // photo filter
-        const filterButtons = document.querySelectorAll('.gallery-nav button');
-        const photoCards = document.querySelectorAll('.past-show-card');
 
 
 let info = false;
@@ -35,9 +32,6 @@ let btn = document.querySelector('.theme');
 
 //check local storage if localstorage.getitem("spanish") == true;
 //if spanish is false, run the part that isn't spanish, and don't need to set item 
-
-
-
 function checkLocalStorageLanguage(){
     // variable for state of spanish mode can be true or false
     const isSpanish = localStorage.getItem("spanish");
@@ -158,7 +152,6 @@ function clear_local_storage(size){
 }
 
 
-
 //anvitha and TA Josie reccommended from StackOverflow and it worked wonderfully 
 window.addEventListener('DOMContentLoaded', () =>{
     checkLocalStorageLanguage()
@@ -171,28 +164,4 @@ window.addEventListener('DOMContentLoaded', () =>{
         clear_text.addEventListener('click', () => {change_text_size(1)});
 
 
-
  });
-
-   filterButtons.forEach(button => {
-    button.addEventListener('click', (event) => {
-      const filterValue = event.target.textContent.toLowerCase().trim();
-      filterPhotos(filterValue);
-    });
-  });
-
-  function filterPhotos(category) {
-    photoCards.forEach(card => {
-      if (category === 'all' || card.dataset.category === category) {
-        card.style.display = 'block';
-      } else {
-        card.style.display = 'none';
-      }
-    });
-
-    navToggle.addEventListener("click", () => {
-    navMenu.classList.toggle("show");
-            
-});
-  
-  }

@@ -289,8 +289,16 @@ padding-right:16px;
 
         /* i still have no idea what media queries do please help */
 @media (max-width: 768px) {
-
+/* 
     .nav-menu{
+        display:none;
+        flex-direction: column;
+        background-color: white;
+        width: 40px;
+        padding: 0px;
+        margin:20px
+    }
+        .nav-menu.show{
         display:none;
         flex-direction: column;
         background-color: white;
@@ -314,8 +322,34 @@ padding-right:16px;
         top:24px;
         right:24px;
         
-    }
+    } */
 
+        .nav-menu{
+        display:none;
+        flex-direction: column;
+        background-color: white;
+        padding: 0px;
+        justify-content: space-between;
+
+    }
+    .nav-menu li{
+        display: flex;
+
+        width: 100%;
+        flex-grow: 1;  
+        
+        font-family: "tt-ricordi-allegria";
+        font-weight: 400;
+        font-style: normal;
+        font-size:medium;
+}
+    .nav-toggle{
+        display:flex;
+        position:absolute;
+        top:24px;
+        right:24px;
+        
+    }
     .nav-toggle:hover{
         background-color: green;
     }

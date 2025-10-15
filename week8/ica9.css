@@ -91,7 +91,7 @@
     }
 }
 
-@media (prefers-reduced-motion: redice){
+@media (prefers-reduced-motion: reduce){
 .fun_button{
     padding-top:20px;
     padding-bottom:20px;

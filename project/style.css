@@ -328,7 +328,7 @@ button:hover {
   color: white;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.8s, box-shadow 0.3s;
 }
 
 .portfolio-overlay {
@@ -466,9 +466,18 @@ button:hover {
   
 }
 .project-item img:hover{
-  transform: translateY(-5px) scale(1.5);
+  transform: translateY(-5px) scale(1.1);
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   transition-duration: .8s;
+}
+.link{
+  color:#ed4965;
+  text-decoration:underline;
+  
+
+}
+.link:visited{
+  color:black;
 }
 
 
@@ -673,5 +682,6 @@ button:hover {
   .hero-h1{
     color:black;
   }
+
 }
 

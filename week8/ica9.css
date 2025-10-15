@@ -1,0 +1,14 @@
+.content{
+    display: grid;
+    max-width: 400px;
+    justify-items: center;
+    
+}
+.fun_button{
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin:40px;
+
+}

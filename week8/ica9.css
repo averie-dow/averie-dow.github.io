@@ -80,4 +80,40 @@
     
 }
 
+@media (max-width: 750px){
+    .fun_button{
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: small;
+    margin-bottom:60px;
+    }
+}
 
+@media (prefers-reduced-motion: redice){
+.fun_button{
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin:40px;
+    background-color: pink;
+    border: 5px solid palevioletred;
+    border-radius:20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    transition: shadow .5s, background-color .5s, color .5s, border .5s;
+
+}
+.fun_button:hover{
+    background-color: seagreen;
+    color: white;
+    border: 5px solid darkgreen;
+    box-shadow: 12px 6px 12px #000000 ;
+   
+}
+
+
+}

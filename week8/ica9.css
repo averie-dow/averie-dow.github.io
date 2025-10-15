@@ -1,6 +1,6 @@
 .content{
     display: grid;
-    max-width: 400px;
+    max-width: 450px;
     justify-items: center;
     
 }
@@ -10,5 +10,74 @@
     padding-left: 40px;
     padding-right: 40px;
     margin:40px;
+    background-color: pink;
+    border: 5px solid palevioletred;
+    border-radius:20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: large;
+    transition: shadow .5s, background-color .5s, color .5s, border .5s;
 
 }
+.fun_button:hover{
+    background-color: seagreen;
+    color: white;
+    border: 5px solid darkgreen;
+    box-shadow: 12px 6px 12px #000000 ;
+    animation-name: myRotation;
+    animation-duration: 2s;
+
+}
+
+.moving_box{
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    border: 5px solid red;
+    animation-name: boxAnimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+
+/* https://codepen.io/teerapuch/pen/vLJXeR source */
+@keyframes myRotation {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+
+    
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes */
+/* //https://www.w3schools.com/css/tryit.asp?filename=trycss3_animation3/ */
+@keyframes boxAnimation {
+    from{
+        left:0px;
+        top:0px;
+    }
+
+    30%{
+        left:500px;
+        top:0px
+
+    }
+
+    60%{
+        top:500px;
+        left:250px;
+    }
+    
+
+    
+    to{
+       left:0px;
+       top:0px; 
+    }
+    
+}
+
+

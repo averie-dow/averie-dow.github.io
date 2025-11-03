@@ -1,5 +1,7 @@
 /* https://www.w3schools.com/css/css_grid.asp */
-
+.body{
+    background-color: beige;
+}
 .threeResult{
     display:none;
 }

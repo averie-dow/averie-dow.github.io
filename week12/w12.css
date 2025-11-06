@@ -66,6 +66,9 @@ h1{
 }
 .resultBtns{
     margin-left:10px;
+    justify-content: center;
+    display:flex;
+
 }
 
 button:hover{

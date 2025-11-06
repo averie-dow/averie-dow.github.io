@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="w12.css">
+    <link rel="stylesheet" href="https://use.typekit.net/gje6xda.css">
+
+    <title>Book Search</title>
+</head>
+<body>
+
+    <div class="search">
+    <h1 class="title">Book Search</h1>
+    <label for="search">Search for specific books by title!</label><br>
+    <input type="text" id="search" name="search" placeholder="Search a Book Title" class="searchBar">
+    <button class="titleField" aria-label="Submit book title button">Submit book title</button>
+</div>
+    <div class="resultBtns">
+    <button class="oneResultBtn" aria-label="Filter for the top result only">Top Result Only</button>
+    <button class="threeResultBtn" aria-label="Filter for the top 3 results">Top 3 Results</button></div>
+
+<section class="results">
+    <div class="oneResult" aria-label="result item">
+    <div class="result">
+    <h2 class="bookTitle1">title</h2>
+    <h3 class="author1">author</h3>
+    </div>
+    </div>
+
+    <div class="result threeResult" aria-label="result item">
+    <h2 class="bookTitle2">title</h2>
+    <h3 class="author2">author</h3>
+    </div>
+
+    <div class="result threeResult" aria-label="result item">
+    <h2 class="bookTitle3">title</h2>
+    <h3 class="author3">author</h3>
+    </div>
+</section>
+
+<script src="w12.js"></script>
+</body>
+
+
+
+</html>

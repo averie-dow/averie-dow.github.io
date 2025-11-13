@@ -1,0 +1,153 @@
+
+/* | Pixels (px) | Rems (rem) | auto gemini AI pixels to REM chart
+|-------------|------------|
+| 10px        | 0.625rem   |
+| 12px        | 0.75rem    |
+| 14px        | 0.875rem   |
+| 16px        | 1rem       |
+| 18px        | 1.125rem   |
+| 20px        | 1.25rem    |
+| 24px        | 1.5rem     |
+| 30px        | 1.875rem   |
+| 32px        | 2rem       | */
+body{
+    gap:none;
+}
+.aboveHeader{
+    gap:0px;
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin:0px;
+}
+.loginButton{
+    gap:0px;
+    margin:0px;
+    align-self: flex-end;
+    width: 240px;
+    padding:12px;
+    background-color: teal;
+    color:white;
+    font-weight:bold;
+    border:none;
+    transition: .2s;
+}
+
+.loginButton:hover{
+    background-color: darkslategrey;
+}
+
+.header{
+    padding-left: 2rem;
+    display:grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color:darkslategray;
+    font-weight: bold;
+    font-size: 2rem;
+}
+.searchField {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    height:42px;
+    border: 1px solid lightslategray;
+}
+
+.searchField:focus {
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    height:42px;
+    border: 1px solid teal;
+}
+
+
+.header_search {
+    height: fill;
+    width: 24rem;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid lightgray;
+    outline:none;
+}
+.header_search:focus {
+    height: fill;
+    width: 24rem;
+    margin: 0;
+    border-radius: 0;
+    border: 1px solid teal;
+    transition:.02s;
+}
+.searchLabel{
+    display:none;
+}
+
+.search_button {
+    height: 42px;
+    margin: 0;
+    border-radius: 0;
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    border: none;
+    transition: .2s
+}
+
+.search_button:hover {
+    height: 42px;
+    margin: 0;
+    border-radius: 0;
+    background-color: darkslategray;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.nav{
+    padding-left:32px;
+    padding-top:16px;
+    padding-bottom: 16px;
+    background-color:teal;
+    color:white;
+    transition:.2s;
+}
+
+.nav ul{
+    font-family: sans-serif;
+    display: flex;
+    gap: 4rem;  
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+
+}
+.nav-item{
+    transition:.2s;
+}
+.nav-item:hover{
+    color:darkslategray;
+    cursor: pointer;
+}
+
+.main-content{
+    background: url("castle_rock.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: max-content;
+    padding:32px;
+    display:grid;
+    grid-template-columns: auto auto;
+    gap:4rem;
+}
+.content-box{
+    background-color: white; 
+    padding:32px;
+}
+

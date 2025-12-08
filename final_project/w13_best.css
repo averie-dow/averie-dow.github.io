@@ -172,7 +172,8 @@ a:hover{
     background-size: cover;
     height: max-content;
     padding:32px;
-    display:flex;
+    display:grid;
+    grid-template-columns: 600px 600px;
     justify-content: center;
     gap:4rem;
     flex-direction: row;
@@ -355,18 +356,6 @@ footer{
     font-weight: 500;
 }
 
-.main-content{
-    background: url("castle_rock.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: max-content;
-    padding:32px;
-    display:flex;
-    justify-content: center;
-    gap:4rem;
-    flex-direction: column; 
-}
-
 .CB-image{
     max-width:200px;
     padding:0px;
@@ -466,6 +455,12 @@ footer{
         .event-filter{
         grid-template-columns: 25rem 25rem;
     }
+
+    .main-content{
+         grid-template-columns: 600px;
+
+    }
+   
 }
 
 @media (max-width: 800px) {
@@ -478,6 +473,19 @@ footer{
     list-style: none;
     
 
+}
+
+
+.main-content{
+    background: url("castle_rock.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: max-content;
+    padding:32px;
+    display:flex;
+    justify-content: center;
+    gap:4rem;
+    flex-direction: column; 
 }
 
     .book-content{

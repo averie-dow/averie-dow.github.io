@@ -50,8 +50,13 @@ body{
     color:darkslategray;
     font-weight: 500;
     font-size: 2rem;
-
+    text-decoration: none;
 }
+.logo:visited{
+    text-decoration: none;
+    color:darkslategrey;
+}
+
 .searchField {
     display: flex;
     gap: 0;
@@ -60,6 +65,20 @@ body{
     height:42px;
     border: 1px solid lightslategray;
 }
+a:visited{
+    text-decoration: none;
+    color:darkslategray;
+    text-decoration-line: none;
+}
+a{
+    text-decoration: none;
+    color:darkslategray;
+    text-decoration-line: none;
+}
+a:hover{
+    color:teal;
+}
+
 
 .searchField:focus {
     display: flex;
@@ -152,7 +171,12 @@ body{
     color:darkslategray;
     text-decoration: none;
 }
-
+.NB-header{
+    font-family: serif;
+    color: teal;
+    font-size: 32px;
+    font-weight: 200;
+}
 .main-content{
     background: url("castle_rock.png");
     background-repeat: no-repeat;
@@ -244,6 +268,100 @@ footer{
     padding-bottom:32px;
     padding-top:32px;
 
+}
+.gallery-nav{
+    margin-left:24px;
+
+}
+
+.event-item{
+    max-width: 400px;
+    border-radius: 16px;
+    margin:24px;
+    padding:20px;
+    background-color: teal;
+    box-shadow: 6px 4px 12px grey;
+    display: grid;
+  
+    
+}
+.event-filter{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+}
+.event-title{
+    font-family: sans-serif;
+    font-weight:500;
+    color: white;
+    margin-top:12px;
+    padding:0px;
+    font-size: 24px;
+}
+.event-description{
+    color:white;
+    font-family: sans-serif;
+    font-weight: 500;
+    margin-bottom: 8px;
+    padding:0px;
+    font-size: 16px;
+}
+.event-image{
+    display: grid;
+    max-height: 200px;
+    align-self:center;
+}
+.NB-subtitle{
+    font-family:sans-serif;
+    margin-bottom:8px;
+}
+.month{
+    border: 2px solid teal;
+    padding: 2px 8px 2px 8px;
+    background-color: white;
+    font-size: 16px;
+    color:teal;
+    font-weight: 600;
+    margin-right:4px;
+}
+.month:active{
+    background:teal;
+    color:white;
+}
+
+.month:hover{
+    background:teal;
+    color:white;
+}
+
+.library-events{
+    color:black;
+    margin-bottom:24px;
+    
+}
+.LE-header{
+    margin-left:24px;
+    font-family: sans-serif;
+    font-weight:500;
+    padding:24px 0px 24px 0px;
+}
+.LE-content{
+    font-family: sans-serif;
+    padding: 0px 0px 0px 24px;
+    font-weight: 500;
+}
+
+.le-list{
+    list-style-type:georgian;
+    font-family: sans-serif;
+    
+}
+
+.rws-header{
+    color:teal;
+    margin-left:24px;
+    padding:0px;
+    margin-bottom:0px;
+    font-weight: 500;
 }
 
 @media (max-width: 800px) {

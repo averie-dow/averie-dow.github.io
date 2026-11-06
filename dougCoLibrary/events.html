@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Events | Douglas County Libraries</title>
+  <link rel="stylesheet" href="w13_best.css">
+</head>
+<body>
+
+  <aside class="utility-bar">
+    <div class="container">
+      <button class="btn-utility">Log In / My DCL</button>
+    </div>
+  </aside>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="w13_best.html">Douglas County Libraries</a></h1>
+      <form class="search-form" action="#" role="search">
+        <label for="search" style="display:none;">Search library collection</label>
+        <input class="search-input" type="search" id="search" placeholder="Search books, movies, audiobooks, and more...">
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="container">
+      <ul>
+        <li><a href="#">Explore</a></li>
+        <li><a href="new_books.html">Find New Books</a></li>
+        <li><a href="#">Library Info</a></li>
+        <li><a href="#">Kids & Teens</a></li>
+        <li><a href="#">Digital Media</a></li>
+        <li><a href="#">Reserve a Space</a></li>
+        <li><a href="events.html" class="active">Library Events</a></li>
+        <li><a href="#">Research</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="page-title-area">
+      <h2 class="page-title">Library Events</h2>
+      <p class="page-subtitle">Explore upcoming book clubs, workshops, and community events.</p>
+
+      <nav class="filter-bar" aria-label="Filter events by month">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="january">January</button>
+        <button class="filter-btn" data-filter="february">February</button>
+        <button class="filter-btn" data-filter="march">March</button>
+        <button class="filter-btn" data-filter="april">April</button>
+        <button class="filter-btn" data-filter="may">May</button>
+        <button class="filter-btn" data-filter="june">June</button>
+        <button class="filter-btn" data-filter="july">July</button>
+        <button class="filter-btn" data-filter="august">August</button>
+        <button class="filter-btn" data-filter="september">September</button>
+        <button class="filter-btn" data-filter="october">October</button>
+        <button class="filter-btn" data-filter="november">November</button>
+        <button class="filter-btn" data-filter="december">December</button>
+      </nav>
+    </section>
+
+    <section class="events-grid" id="eventsGrid">
+      <article class="event-card" data-category="january">
+        <img class="event-img" src="assets/alchemised.jpg" alt="Alchemised book club flyer">
+        <div class="event-content">
+          <h3 class="event-title">January Book Club Meeting</h3>
+          <p class="event-meta"><strong>When:</strong> January 1st @ 5:00 PM</p>
+          <p class="event-meta"><strong>Where:</strong> Lower Library Meeting Room</p>
+        </div>
+      </article>
+
+      <article class="event-card" data-category="january">
+        <img class="event-img" src="assets/cat.jpeg" alt="Meme Making Workshop flyer">
+        <div class="event-content">
+          <h3 class="event-title">Meme Making Workshop</h3>
+          <p class="event-meta"><strong>When:</strong> January 15th @ 5:00 PM</p>
+          <p class="event-meta"><strong>Where:</strong> Creative Tech Lab</p>
+        </div>
+      </article>
+
+      <article class="event-card" data-category="february">
+        <img class="event-img" src="assets/beautiful_world.jpeg" alt="Beautiful World book club flyer">
+        <div class="event-content">
+          <h3 class="event-title">February Book Club Meeting</h3>
+          <p class="event-meta"><strong>When:</strong> February 1st @ 5:00 PM</p>
+          <p class="event-meta"><strong>Where:</strong> Lower Library Meeting Room</p>
+        </div>
+      </article>
+
+      <article class="event-card" data-category="march">
+        <img class="event-img" src="assets/brimstone.jpg" alt="March book club flyer">
+        <div class="event-content">
+          <h3 class="event-title">March Book Club Meeting</h3>
+          <p class="event-meta"><strong>When:</strong> March 1st @ 5:00 PM</p>
+          <p class="event-meta"><strong>Where:</strong> Lower Library Meeting Room</p>
+        </div>
+      </article>
+
+      <article class="event-card" data-category="april">
+        <img class="event-img" src="assets/convos.jpeg" alt="Conversations with Friends book club flyer">
+        <div class="event-content">
+          <h3 class="event-title">April Book Club Meeting</h3>
+          <p class="event-meta"><strong>When:</strong> April 1st @ 5:00 PM</p>
+          <p class="event-meta"><strong>Where:</strong> Lower Library Meeting Room</p>
+        </div>
+      </article>
+
+      <article class="event-card" data-category="may">
+        <img class="event-img" src="assets/intermezzo.jpg" alt="Intermezzo book club flyer">
+        <div class="event-content">
+          <h3 class="event-title">May Book Club Meeting</h3>
+          <p class="event-meta"><strong>When:</strong> May 1st @ 5:00 PM</p>
+          <p class="event-meta"><strong>Where:</strong> Lower Library Meeting Room</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h2>Douglas County Libraries</h2>
+        <p>Connecting our community through discovery and learning.</p>
+      </div>
+      <div class="footer-info">
+        <p>100 S. Wilcox Street, Castle Rock, CO 80104</p>
+        <p>Email: CRPL@castlerock.com</p>
+        <p>Phone: (303) 791-7323</p>
+        <p>Social: @castlerockpubliclibrary</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const eventCards = document.querySelectorAll(".event-card");
+
+      filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterButtons.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const category = btn.dataset.filter;
+          eventCards.forEach(card => {
+            if (category === "all" || card.dataset.category === category) {
+              card.style.display = "flex";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Douglas County Libraries</title>
+  <link rel="stylesheet" href="w13_best.css">
+</head>
+<body>
+
+  <aside class="utility-bar">
+    <div class="container">
+      <button class="btn-utility">Log In / My DCL</button>
+    </div>
+  </aside>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="logo"><a href="w13_best.html">Douglas County Libraries</a></h1>
+      <form class="search-form" action="#" role="search">
+        <label for="search" style="display:none;">Search library collection</label>
+        <input class="search-input" type="search" id="search" placeholder="Search books, movies, audiobooks, and more...">
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Main Navigation">
+    <div class="container">
+      <ul>
+        <li><a href="#">Explore</a></li>
+        <li><a href="new_books.html">Find New Books</a></li>
+        <li><a href="#">Library Info</a></li>
+        <li><a href="#">Kids & Teens</a></li>
+        <li><a href="#">Digital Media</a></li>
+        <li><a href="#">Reserve a Space</a></li>
+        <li><a href="events.html">Library Events</a></li>
+        <li><a href="#">Research</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero-banner">
+      <div class="container cards-grid">
+        <article class="featured-card">
+          <h2>Reads Worth Sharing</h2>
+          <div class="featured-card-body">
+            <img class="book-cover" src="assets/intermezzo.jpg" alt="Featured daily read cover">
+            <div class="featured-info">
+              <h3 class="title">Loading Title...</h3>
+              <p class="author">Loading Author...</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="featured-card">
+          <h2>Featured Event This Week</h2>
+          <div class="featured-card-body">
+            <img src="assets/book_club.jpg" alt="Book Club gathering">
+            <div class="featured-info">
+              <h3>Book Club Meeting</h3>
+              <p class="author">Downstairs Lobby</p>
+              <p style="font-size: 0.875rem; color: #475569;">Join us this Thursday from 2:00 PM – 4:00 PM for our monthly discussion.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <h2>Douglas County Libraries</h2>
+        <p>Connecting our community through discovery and learning.</p>
+      </div>
+      <div class="footer-info">
+        <p>100 S. Wilcox Street, Castle Rock, CO 80104</p>
+        <p>Email: CRPL@castlerock.com</p>
+        <p>Phone: (303) 791-7323</p>
+        <p>Social: @castlerockpubliclibrary</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="books_data.js"></script>
+  <script src="w13_best.js"></script>
+</body>
+</html>
